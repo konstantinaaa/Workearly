@@ -9,9 +9,31 @@ Input: "XLVI"
 Output: 46
 '''
 def BasicRomanNumerals(strParam):
+  # Define a dictionary that maps Roman numeral characters to their numeric values.
+  roman_numerals = {
+    "I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000
+  }
 
-  # code goes here
-  return strParam
+  # Initialize total to keep track of the final integer value and prev_value to track the previous character's value.
+  total = 0
+  prev_value = 0
 
-# keep this function call here
+  for numeral in strParam:
+    value = roman_numerals[numeral]
+
+    # Compare the current value with the previous value.
+    if value > prev_value:
+      # If the current value is greater than the previous value, it means subtraction is required.
+      # To account for this, subtract twice the previous value from the total.
+      total += value - 2 * prev_value
+    else:
+      # If the current value is less than or equal to the previous value, simply add it to the total.
+      total += value
+
+    # Update prev_value for the next iteration.
+    prev_value = value
+
+  return total
+
+
 print(BasicRomanNumerals(input()))
