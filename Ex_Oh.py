@@ -13,7 +13,6 @@ Input: "x"
 Output: false
 """
 def ExOh(strParam):
-    strParam = str(strParam)
     x = strParam.count("x")
     o = strParam.count("o")
     if x == o:
