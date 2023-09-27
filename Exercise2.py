@@ -10,7 +10,7 @@ Input: 10
 Output: 24
 """
 def BasicAssignmentExercise2(num):
-    num = float(num)
+    num = int(num)
     return int((num + 2)*(num/5))
 
 
