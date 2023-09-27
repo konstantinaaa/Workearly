@@ -7,13 +7,19 @@ Input: ["This is", "an array", "of strings!"]
 Output: 0
 Input: ["Python exercises", "are", "so much", "fun!"]
 Output: 4
-1. For input ["It is difficult to", "understand the lengths he would", "go to remain", "rich."] the output was incorrect. The correct output is 4
-
-2. For input ["The overpass", "went under the highway", "and into a", "secret world."] the output was incorrect. The correct output is 5
 """
 def BasicAssignmentExercise3(strArr):
-       strArr = str(strArr)
+       count = 0
+       for i in strArr:
+              if i == 'e':
+                     count += 1
+       return count
+""" or 
+def BasicAssignmentExercise3(strArr):
        return strArr.count("e")
 
+print(BasicAssignmentExercise3(input()))
+"""
 
 print(BasicAssignmentExercise3(input()))
+
