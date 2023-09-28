@@ -15,7 +15,7 @@ Output: 63
 
 def LargestPair(num):
     num = str(num)
-    num1 = num[:-1]
+    num1 = num[:-1] # it removes the last character from the string.
     m = max(num1)
     p = num.find(m)
     return f'{m}{num[p+1]}'
