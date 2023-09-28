@@ -21,5 +21,3 @@ def PowerSetCount(arr):
    l = len(arr)
    return 2**l
 print(PowerSetCount([1, 2, 3]))
-
-'''χρησιμοποίησα μαθηματικό τύπο'''
