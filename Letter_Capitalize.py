@@ -12,4 +12,5 @@ Output: I Ran There
 import string
 def LetterCapitalize(strParam):
     return string.capwords(strParam)
+    # or return strParam.title()
 print(LetterCapitalize(input()))
