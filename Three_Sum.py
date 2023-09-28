@@ -10,6 +10,5 @@ def ThreeSum(arr):
 
   # code goes here
   return arr
-
 # keep this function call here
 print(ThreeSum(input()))
