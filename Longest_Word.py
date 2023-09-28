@@ -13,15 +13,22 @@ Input: "I love dogs"
 Output: love
 """
 import string
+
 def LongestWord(sen):
-    new_sen = sen.translate(sen.maketrans("","", string.punctuation))
-    new_sen = list(new_sen.split(" "))
-    longest_word = new_sen[0]
-    for i in new_sen:
-        if len(longest_word) >= len(i):
-            longest_word = longest_word
-        else:
-            longest_word = i
+    # Remove punctuation from the input string
+    new_sen = sen.translate(sen.maketrans("", "", string.punctuation))
+
+    # Split the string into words
+    word_list = new_sen.split()
+
+    # Initialize the longest_word to the first word
+    longest_word = word_list[0]
+
+    for word in word_list:
+        # Compare the length of the current word with the length of the longest_word
+        if len(word) > len(longest_word):
+            longest_word = word
+
     return longest_word
 
 print(LongestWord(input()))
