@@ -13,11 +13,15 @@ Input: "eye"
 Output: true
 """
 def Palindrome(strParam):
-    for i in range(len(strParam)+1):
-        if strParam[i] == strParam[-(i+1)]:
-            return True
-        else:
-            return False
+    # Remove spaces and convert to lowercase
+    new_str = "".join(strParam.split()).lower()
+
+    # Check if the cleaned string is equal to its reverse
+    if new_str == new_str[::-1]:
+        return True
+    else:
+        return False
+    
 
 # keep this function call here
 print(Palindrome(input()))
